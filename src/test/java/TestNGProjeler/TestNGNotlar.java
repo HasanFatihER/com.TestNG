@@ -38,7 +38,7 @@ package TestNGProjeler;
          Assert.assertEquals(expectedAdress, driver.getCurrentUrl());
 
      }
-     @Test (priority = 2)
+     @Test (priority = 3)
      public void titleTest(){
          //  1. Test : Coinmarketcap adres titlenı test edin
         String expectedTitle="Cryptocurrency Prices, Charts And Market Capitalizations | CoinMarketCap";
@@ -46,7 +46,7 @@ package TestNGProjeler;
 
      }
 
-     @Test (priority = 3)
+     @Test (priority = 2)
 
      public void logoTest(){
         WebElement logo=driver.findElement(By.xpath("//div[@class='sc-73pwfm-0 jZUHEB cmc-logo cmc-logo--size-large']"));
