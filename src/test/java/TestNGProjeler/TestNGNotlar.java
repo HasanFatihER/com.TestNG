@@ -13,7 +13,20 @@ package TestNGProjeler;
         import org.testng.annotations.Test;
         import java.time.Duration;
  public class TestNGNotlar {
-     //● Bir class oluşturun: DependsOnTest
+
+        /* JUnit'in gelişmiş versiyonu olan bir kütüphanedir.
+
+        * Ayrıntılı tüm bilgilere https://testng.org/doc/documentation-main.html
+        adresinden ulaşabilirsiniz.
+
+        * Sadece Java için kullanılır.
+
+        * priority ve dependsOnMethod en önemli mehodlarındandır.
+
+        * Paralel ve cross Browser özelliği ile aynı anda birden fazla testcase farklı browserlarda çalıştırır.
+
+        * Teknik olarak JUnit ve TestNG aynı anda kullanılabilir. Fakat tavsiye edilmez.
+        */
 
      WebDriver driver;
 
@@ -40,7 +53,7 @@ package TestNGProjeler;
      }
      @Test (priority = 2)
      public void titleTest(){
-         //  1. Test : Coinmarketcap adres titlenı test edin
+         //  2. Test : Coinmarketcap adres titlenı test edin
         String expectedTitle="Cryptocurrency Prices, Charts And Market Capitalizations | CoinMarketCap";
         Assert.assertEquals(expectedTitle,driver.getTitle());
 
@@ -49,7 +62,7 @@ package TestNGProjeler;
      @Test (priority = 3)
 
      public void logoTest(){
-        WebElement logo=driver.findElement(By.xpath("//div[@class='sc-73pwfm-0 jZUHEB cmc-logo cmc-logo--size-large']"));
+        WebElement logo=driver.findElement(By.xpath("//div[@class='sc-73pwfm-0 dugElF cmc-logo cmc-logo--size-large']"));
         Assert.assertTrue(logo.isDisplayed());
      }
      @AfterClass
