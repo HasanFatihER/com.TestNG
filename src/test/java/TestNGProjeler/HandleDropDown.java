@@ -11,6 +11,9 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
+import java.util.AbstractList;
+import java.util.ArrayList;
+import java.util.List;
 
 public class HandleDropDown {
     /* Aşağı açılır pencelere DropDown denir. Dropdown pencereleri genelde selectle başlar ve
@@ -52,8 +55,19 @@ public class HandleDropDown {
         option.selectByValue("search-alias=baby-products-intl-ship");
         Thread.sleep(2000);
         option.selectByIndex(7);
+        // Select için kullandığımız bu methodlar void'dir. Hiç bir değer dönmezler.
         Thread.sleep(2000);
-    }
+
+        // Tüm seçenekleri yazdırma
+        List<WebElement> options=new ArrayList<>(); {
+            options=option.getOptions();
+            for (WebElement w:options ) {
+                System.out.println(w.getText());
+            }
+
+            }
+        }
+
 
     @AfterClass
     public void tearDown() {
