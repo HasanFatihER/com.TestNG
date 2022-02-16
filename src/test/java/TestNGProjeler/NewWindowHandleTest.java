@@ -14,7 +14,7 @@ import org.testng.asserts.SoftAssert;
 import java.time.Duration;
 import java.util.Set;
 
-public class newWindowHandleTest {
+public class NewWindowHandleTest {
 
     WebDriver driver;
 
