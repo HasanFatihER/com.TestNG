@@ -12,7 +12,7 @@ public class BaseTestDizayn extends TestBase {
     * yöntem test için uygun olursa onu extends ederiz.
 
     * TestBase class’i abstract da yapabiliriz. Tek avantajı Abstract class'lardan obje oluşturulamaz
-    bu olur. 
+    bu olur.
 
     * */
 
