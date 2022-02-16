@@ -22,7 +22,7 @@ package TestNGProjeler;
      - Iframe’den cikmak icin 2 komut kullanılır.
         driver.switchTo( ).parentFrame( );  --> 1 ust seviyedeki frame’e geçiş.
 
-        driver.switchTo( ).defaultContent( ); En üstteki frame’e geçiş icin kullanılır.
+        driver.switchTo( ).defaultContent( ); Ana sayfaya geçiş icin kullanılır.
 */
 
 import io.github.bonigarcia.wdm.WebDriverManager;
