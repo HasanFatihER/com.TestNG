@@ -72,6 +72,7 @@ public class IframeHandleTest {
 
        //Text Box’a “Selenium'u seviyorum!” yazin.
        WebElement iFrame=driver.findElement(By.tagName("iframe"));
+       // Text alanı ıframe'dir. Bu sebeple iframe geçiş yapmalıyız.
        driver.switchTo().frame(iFrame);
        WebElement text=driver.findElement(By.tagName("p"));
        text.clear();
@@ -81,6 +82,7 @@ public class IframeHandleTest {
        //TextBox’in altinda bulunan “Elemental Selenium” linkini textinin gorunur oldugunu
        //dogrulayin ve konsolda yazdirin.
         driver.switchTo().parentFrame();
+        // Bu alan ana sayfada bu yüzden driver'ı ıframe'den dişarı çıkarmalıyız.
         WebElement text2=driver.findElement(By.xpath("//a[text()='Elemental Selenium']"));
         assertion.assertTrue(text2.isDisplayed(),"isDisplayed FAILED");
         System.out.println(text2.getText());
