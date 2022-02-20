@@ -40,7 +40,7 @@ public class ScreenShotBase {
     public void screenShot() throws IOException {
         TakesScreenshot screenshot=(TakesScreenshot)driver;
         //Aynı isimle kaydetmemesi adına bu şekilde çözüm buluyoruz.
-        String scrname=new SimpleDateFormat("yy/MM/dd/hh/mm").format(new Date());
+        String scrname=new SimpleDateFormat("yyyy-MM-dd-hh-mm").format(new Date());
         File screenShotsFile=new File("/home/hasan/IdeaProjects/com.TestNG/src/test/java/Screenshots/"+scrname+".png/");
         File tasiyiciDosya=screenshot.getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(tasiyiciDosya,screenShotsFile);
